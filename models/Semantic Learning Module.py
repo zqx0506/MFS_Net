@@ -22,7 +22,7 @@ class SelfEnhancingSemanticLearning(nn.Module):
         mask_adjusted_out = self.dynamic_mask_conv(self_att_out)
 
         # 3. 分头操作，分别对每个头应用动态卷积，再融合多头特征
-        multi_head_out = self.apply_multi_head_conv(self_att_out, mask_adjusted_out)
+        multi_head_out = ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
         # 4. 跨模态补充增强：用 x_cross 对多头融合特征进行 cross-attention + 动态掩码调制
         cross_att_out = self.cross_attention(x_cross, multi_head_out)
