@@ -30,11 +30,10 @@ class GuidedMultimodalFusion(nn.Module):
         M_smooth = LocalNormalize(M_fused)  # 使用 3x3 平均池化 + MinMax 归一化
 
         # Step 7: 自适应阈值处理，生成二值掩码
-        threshold = 0.5 * torch.mean(M_smooth)
-        M_mask = (M_smooth >= threshold).float()
-
+        ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        
         # Step 8: Guided Fusion，根据掩码引导融合
-        F_out = M_mask * x1 + (1 - M_mask) * x2
+        F_out = ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
         # Step 9: 输出增强后的两模态特征
         x1_out = F_out * x1 + x1
