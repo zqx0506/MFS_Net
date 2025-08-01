@@ -19,7 +19,7 @@ class GuidedMultimodalFusion(nn.Module):
         # Step 3: 融合注意力权重，得到混合门控图 g
         g = W_c * W_s  # 广播操作，得到最终门控图
 
-        # Step 4: 提取两模态 Grad-CAM 风格响应图（用于显著图生成）
+        # Step 4: 提取两模态风格响应图（用于显著图生成）
         M1 = ComputeSaliency(x1)  # 对应 x1 的响应热图
         M2 = ComputeSaliency(x2)  # 对应 x2 的响应热图
 
